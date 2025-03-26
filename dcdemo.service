@@ -1,0 +1,10 @@
+[Unit]
+Description=DC Demo
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/demo/dcdemo/start.sh
+User=demo
+[Install]
+WantedBy=multi-user.target
