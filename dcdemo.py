@@ -23,8 +23,8 @@ def loop():
         df["mem"] = [psutil.virtual_memory().percent]
         df["neti"] = [psutil.net_io_counters().bytes_recv]
         df["neto"] = [psutil.net_io_counters().bytes_sent]
-        if "sensors_temperatures" in vars(psutil):
-            df["temp"] = [psutil.sensors_temperatures(fahrenheit=True).current]
+        if "sensors_temperatures" in vars(psutil)
+            df["temp"] = [psutil.sensors_temperatures(fahrenheit=True)["cpu_thermal"][0].current]
         t = datetime.now().timestamp()
 
 @app.route("/")
